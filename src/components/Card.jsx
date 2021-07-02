@@ -5,9 +5,9 @@ function Card({ name, price, imageSrc }) {
         <li className="sneakers__item">
             <div className="sneakers__item-wrap">
                 <div className="sneakers__like-btn">
-                    <img  src="/img/no-like.svg" alt="no-love"></img>
+                    <img  src="/img/no-like.svg" alt="dislike"/>
                 </div>
-                <img className="sneakers__img" src={imageSrc} alt="nike"></img>
+                <img className="sneakers__img" src={imageSrc} alt="nike"/>
                 <p className="sneakers__name">
                     {name}
                 </p>
