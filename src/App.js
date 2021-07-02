@@ -4,26 +4,27 @@ import './App.css';
 import Card from './components/Card'
 import Header from './components/Header';
 
+
 const sneakersArr = [
     {
         name : 'Мужские Кроссовки Nike Blazer Mid Suede', 
         price: 12990,
-        imgSrc: './img/1.jpg'
+        imgSrc: require('./img/sneakersss/1.jpg').default
     },
     {
         name : 'Мужские Кроссовки Nike Air Max 270', 
         price: 12990,
-        imgSrc: '/src/img/sneakers/2.jpg'
+        imgSrc: require('./img/sneakersss/2.jpg').default
+    },
+    {
+        name : 'Мужские Кроссовки Nike Air Max 270', 
+        price: 1000,
+        imgSrc: require('./img/sneakersss/3.jpg').default
     },
     {
         name : 'Мужские Кроссовки Nike Air Max 270', 
         price: 12990,
-        imgSrc: '/img/sneakers/3.jpg'
-    },
-    {
-        name : 'Мужские Кроссовки Nike Air Max 270', 
-        price: 12990,
-        imgSrc: '/img/sneakers/4.jpg'
+        imgSrc: require('./img/sneakersss/4.jpg').default
     },
 ]
 
@@ -37,7 +38,7 @@ function App() {
             <div className="container">
                 <div className="offer-slider__slide slide">
                     <div className="slide__text">
-                        <img className="slide__logo" src="/img/adidas-logo.png" alt="adidas-logo"></img>
+                        <img className="slide__logo" src="/img/adidas-logo.png" alt="adidas-logo"/>
                         <h2>Stan Smith
                         <span>, 
                             <br />Forever!
@@ -46,7 +47,7 @@ function App() {
                         <button className="slide__button">купить</button>
                     </div>
                     <div className="slide__image">
-                        <img src="/img/green-offer.png" alt=""></img>
+                        <img src="/img/green-offer.png" alt=""/>
                     </div>
                 </div>
             </div>
@@ -58,14 +59,15 @@ function App() {
                       Все кроссовки
                     </h1>
                     <form action="">
-                        <input type="text" className="sneakers__search" placeholder="Поиск..."></input>
+                        <input type="text" className="sneakers__search" placeholder="Поиск..."/>
                     </form>
                 </div>
                 <ul className="sneakers__sneakers-list">
-                {sneakersArr.map( (obj) => (
+                {sneakersArr.map( (obj, idx) => (
                     <Card name = {obj.name} 
                         price = {obj.price}
                         imageSrc= {obj.imgSrc}
+                        key={idx}
                     />) 
                     )}
                 </ul>

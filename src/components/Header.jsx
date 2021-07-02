@@ -7,7 +7,7 @@ function Header(params) {
                 <div className="header__wrap">
                     <div className="header__logo-wrap">
                         <a href="/">
-                            <img className="header__logo" src="/img/main-logo.png" alt="logo"></img>
+                            <img className="header__logo" src="../img/main-logo.png" alt="logo"/>
                             
                             <div className="header__logo-text">
                                 <p>React Sneakers</p>
@@ -16,12 +16,12 @@ function Header(params) {
                         </a>
                     </div>
                     <div className="header__user-bar user-bar">
-                        <a className="user-bar__basket-link">
-                            <img src="/img/basket.svg" alt="basket"></img>
+                        <a className="user-bar__basket-link" href="liked-empty.html">
+                            <img src="../img/basket.svg" alt="basket"/>
                             <p>1205 руб.</p>
                         </a>
                         <a className="user-bar__liked-link" href="liked-empty.html">
-                            <img src="/img/heart.svg" alt="heart"></img>
+                            <img src="/img/heart.svg" alt="heart"/>
                             <p>
                                 <span></span>
                             </p>
