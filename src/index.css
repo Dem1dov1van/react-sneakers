@@ -189,7 +189,7 @@ ul {
   box-sizing: border-box;
   border-radius: 40px;
   padding-bottom: 34px;
-  transition: .2s all ease;
+  transition: .4s all ease;
 }
 .sneakers__item:hover{
   transform: translate(0, -5px) ;
