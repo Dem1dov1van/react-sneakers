@@ -1,13 +1,622 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+body {
+  background-color: #e5e5e5;
+}
+ul {
+  list-style: none;
+}
+.main-wrapper {
+  background-color: #fff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 20px 20px 0 0;
+  width: 1180px;
+  margin: 85px auto 0;
+  min-height: 90vh;
+}
+.header {
+  width: 100%;
+  border-bottom: 1px solid #eaeaea;
+}
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+.header__wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+.header__logo-wrap {
+  flex-shrink: 0;
+  margin-right: auto;
+}
+.header__logo-wrap a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+.header__logo {
+  margin-right: 15px;
+}
+.header__logo-text p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.header__logo-text span {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #9d9d9d;
+}
+.user-bar {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-bar a:not(:last-child) {
+  margin-right: 30px;
+}
+.user-bar__basket-link {
+  display: flex;
+  align-items: center;
+}
+.user-bar__basket-link p {
+  margin-left: 10px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #5c5c5c;
+}
+.section__offer-slider {
+  padding: 45px 0 40px;
+}
+.slide__logo {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+}
+
+.slide {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #f4efe9;
+  border-radius: 20px;
+  position: relative;
+}
+.slide__text {
+  margin-left: 60px;
+}
+.slide__text h2 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 50px;
+  color: #8bb43c;
+  margin-bottom: 10px;
+}
+.slide__text h2 span {
+  color: black;
+}
+.slide__button {
+  padding: 14px 30px;
+  background: #a5d364;
+  border-radius: 110px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  width: 170px;
+}
+.slide__image {
+  margin-left: auto;
+  max-width: 642px;
+}
+.slide__image img {
+  width: 100%;
+  object-fit: contain;
+}
+.sneakers {
+  padding: 0 0 40px;
+}
+.sneakers__top-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.sneakers__search {
+  position: relative;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 14px 0 14px 46px;
+}
+.sneakers__search:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  background: url(../src/img/Loopa.svg);
+  transform: translate(-50%, 0);
+}
+.sneakers__item {
+  position: relative;
+  width: 210px;
+  background: #ffffff;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 40px;
+  padding-bottom: 34px;
+  transition: .2s all ease;
+}
+.sneakers__item:hover{
+  transform: translate(0, -5px) ;
+
+  box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.05);
+}
+.sneakers__title {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+}
+.sneakers__item-wrap {
+  padding: 0 28px;
+  margin-bottom: 10px;
+}
+.sneakers__img {
+  width: 133px;
+  margin-top: 20px;
+}
+.sneakers__name {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  margin-bottom: 14px;
+  margin-bottom: 40px;
+}
+.sneakers__price {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+.sneakers__price b {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  margin-bottom: 34px;
+}
+.sneakers__add-btn {
+  position: absolute;
+  right: 28px;
+  bottom: 20px;
+}
+.sneakers__like-btn {
+  position: absolute;
+  left: 28px;
+  top: 20px;
+}
+.sneakers__sneakers-list {
+  list-style: none;
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.basket {
+  position: absolute;
+  width: 385px;
+  top: 0px;
+  right: 0;
+  background-color: #fff;
+  height: 100%;
+  padding: 30px 0;
+}
+.basket__wrap {
+  padding: 0 30px;
+}
+.basket__title {
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+.basket__item {
+  background: #ffffff;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.basket__item-wrap {
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sneakers__back-btn,
+.sneakers__add-bt,
+.basket__delete-btn {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.sneakers__like-btn,
+.sneakers__add-btn {
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  border-radius: 8px;
+  cursor: grabbing;
+}
+.sneakers__back-btn::before,
+.sneakers__add-btn::before,
+.basket__delete-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11px;
+  height: 2px;
+  border-radius: 10%;
+  background: #b5b5b5;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.sneakers__back-btn::after,
+.sneakers__add-btn::after,
+.basket__delete-btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11px;
+  height: 2px;
+  border-radius: 10%;
+  background: #b5b5b5;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.sneakers__back-btn::before {
+  transform: translate(-6px, 3px) rotate(45deg);
+}
+.sneakers__back-btn::after {
+  transform: translate(-6px, -3px) rotate(-45deg);
+}
+.sneakers__add-btn::before {
+  transform: translate(-50%, -50%) rotate(0);
+  transition: 0.3s all ease;
+}
+.sneakers__add-btn::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: 0.3s all ease;
+}
+.sneakers__add-btn:hover {
+  border: 1px solid #afafaf;
+}
+.sneakers__add-btn:hover.sneakers__add-btn::before {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.sneakers__add-btn:hover.sneakers__add-btn::after {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.add::before,
+.add::after {
+  display: none;
+}
+.add {
+  background: url(../src/img/add.svg);
+}
+.like {
+  background: url(../src/img/like.svg);
+}
+.like img {
+  display: none;
+}
+.sneakers__back-btn:hover,
+.basket__delete-btn:hover {
+  border: 1px solid #bdbdbd;
+}
+.basket__delete-btn:hover.basket__delete-btn::before,
+.basket__delete-btn:hover.basket__delete-btn::after {
+  background: rgb(238, 112, 112);
+}
+.basket__delete-btn:active {
+  border: 1px solid rgb(238, 112, 112);
+  box-shadow: 0 -1px 2px rgb(238, 112, 112);
+}
+.basket__img {
+  width: 70px;
+  margin-right: 20px;
+}
+.basket__summ,
+.basket__tax {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.dash-line {
+  height: 20px;
+  width: 155px;
+  border-bottom: 1px dashed #dfdfdf;
+  box-sizing: border-box;
+}
+.basket__price {
+  width: 85%;
+  position: absolute;
+  bottom: 30px;
+}
+.empty-liked__btn,
+.basket-empty__btn,
+.basket__btn {
+  background: #9dd558;
+  border-radius: 18px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+  padding: 18px 0;
+  border: none;
+}
+.basket__text-wrap p {
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  width: 150px;
+}
+.basket-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.basket__basket-empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.basket-empty__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+.basket-empty__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #000000;
+  opacity: 0.4;
+}
+.basket__tax p,
+.basket__summ p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+.basket__btn {
+  margin-top: 5px;
+  position: relative;
+}
+.empty-liked__btn:hover,
+.slide__button:hover,
+.basket-empty__btn:hover,
+.basket__btn:hover {
+  background: #89bb4d;
+  cursor: grab;
+}
+.empty-liked__btn:active,
+.slide__button:active,
+.basket-empty__btn:active,
+.basket__btn:active {
+  transform: translate(0, 2px);
+  box-shadow: 0px -3px 5px #88888865;
+}
+.basket__btn::after {
+  position: absolute;
+  top: 50%;
+  right: 33px;
+  transform: translate(0, -50%);
+  /* content: url(img/Arrow.svg); */
+  display: block;
+}
+.sneakers__top-wrap--basket {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 40px 0;
+}
+.sneakers__back-btn {
+  margin-right: 21px;
+}
+.empty-liked__btn {
+  position: relative;
+}
+.empty-liked__btn::before {
+  display: block;
+  /* content: url(../public/img/Arrow.svg); */
+  content: url(../src/img/Arrow.svg);
+  position: absolute;
+  top: 50%;
+  transform: translate(20px, -50%) rotate(180deg);
+}
+.empty-liked {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 320px;
+}
+.empty-liked img {
+  margin-bottom: 24px;
+}
+.empty-liked__title {
+  margin-bottom: 11px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #000000;
+}
+.empty-liked__text {
+  margin-bottom: 70px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+  opacity: 0.4;
+}
+@media (max-width: 1199px) {
+  .main-wrapper {
+    width: 1000px;
+  }
+  .sneakers__sneakers-list {
+    grid-gap: 10px;
+  }
+  .container {
+    width: 860px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-wrapper {
+    width: 760px;
+    margin-top: 60px;
+  }
+  .container {
+    width: 700px;
+  }
+  .header__wrap {
+    padding: 30px 0;
+  }
+  .sneakers__sneakers-list {
+    grid-gap: 35px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .main-wrapper {
+    width: 90%;
+    margin-top: 40px;
+  }
+  .container {
+    width: 90%;
+  }
+  .header__wrap {
+    padding: 15px 0;
+  }
+  .header__logo-text p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .header__logo-text span {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .user-bar a:not(:last-child) {
+    margin-right: 15px;
+  }
+  .slide__text h2 {
+    padding-top: 50px;
+  }
+  .sneakers__sneakers-list {
+    grid-gap: 5px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .sneakers__item {
+    width: 100%;
+  }
+  .sneakers__img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .main-wrapper {
+    width: 95%;
+    margin-top: 20px;
+  }
+  .container {
+    width: 95%;
+  }
+  .sneakers__sneakers-list {
+    grid-gap: 5px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
